@@ -18,6 +18,8 @@
     "node": ">=22.13.0"
   },
   "dependencies": {
+    "@chat-adapter/slack": "^4.26.0",
+    "@mastra/agent-browser": "^0.2.0",
     "@mastra/core": "^1.27.0",
     "@mastra/duckdb": "^1.2.0",
     "@mastra/evals": "^1.2.1",
@@ -25,6 +27,9 @@
     "@mastra/loggers": "^1.1.1",
     "@mastra/memory": "^1.17.0",
     "@mastra/observability": "^1.10.0",
+    "@mastra/slack": "^1.0.2",
+    "agent-browser": "^0.26.0",
+    "googleapis": "^171.4.0",
     "zod": "^4.3.6"
   },
   "devDependencies": {
