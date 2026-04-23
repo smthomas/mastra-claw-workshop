@@ -1,5 +1,5 @@
 ---
-name: ShaneEmailStyle
+name: email-style
 description: Professional but slightly casual email style for Shane.
 ---
 

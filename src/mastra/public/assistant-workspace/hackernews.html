@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI-Related Hacker News Highlights</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card: #111827;
+      --text: #e5e7eb;
+      --muted: #94a3b8;
+      --accent: #38bdf8;
+      --accent2: #a78bfa;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      background: linear-gradient(135deg, #020617, #111827);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+    .deck {
+      width: min(960px, 100%);
+      background: rgba(17, 24, 39, 0.9);
+      border: 1px solid rgba(148, 163, 184, 0.2);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+    }
+    .slide {
+      display: none;
+      padding: 48px;
+      min-height: 620px;
+    }
+    .slide.active { display: block; }
+    .kicker {
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+    h1, h2 {
+      margin: 0 0 18px;
+      line-height: 1.1;
+    }
+    h1 { font-size: 48px; }
+    h2 { font-size: 36px; }
+    p, li {
+      color: var(--text);
+      font-size: 22px;
+      line-height: 1.5;
+    }
+    ul { padding-left: 24px; }
+    li { margin: 12px 0; }
+    .meta {
+      color: var(--muted);
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+    .source a {
+      color: var(--accent2);
+      text-decoration: none;
+    }
+    .controls {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 24px;
+      background: rgba(2, 6, 23, 0.8);
+      border-top: 1px solid rgba(148, 163, 184, 0.15);
+    }
+    button {
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      color: white;
+      border: none;
+      border-radius: 999px;
+      padding: 12px 18px;
+      font-size: 16px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    button:hover { opacity: 0.95; }
+    .counter {
+      color: var(--muted);
+      font-size: 15px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+    .panel {
+      background: rgba(30, 41, 59, 0.45);
+      border: 1px solid rgba(148, 163, 184, 0.12);
+      border-radius: 16px;
+      padding: 20px;
+    }
+    @media (max-width: 720px) {
+      .slide { padding: 28px; min-height: auto; }
+      h1 { font-size: 34px; }
+      h2 { font-size: 28px; }
+      p, li { font-size: 18px; }
+      .grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="deck">
+    <section class="slide active">
+      <div class="kicker">Hacker News AI Roundup</div>
+      <h1>3 Recent AI-Related Posts</h1>
+      <p>A quick slideshow summarizing the three recent AI-related Hacker News posts you asked me to review.</p>
+      <div class="grid">
+        <div class="panel">
+          <h2>Covered</h2>
+          <ul>
+            <li>Ars Technica newsroom AI policy</li>
+            <li>Reuters on a ping-pong robot beating elite humans</li>
+            <li>Zed’s Parallel Agents launch</li>
+          </ul>
+        </div>
+        <div class="panel">
+          <h2>Theme</h2>
+          <ul>
+            <li>AI governance and editorial standards</li>
+            <li>Embodied AI and robotics progress</li>
+            <li>Developer tooling and multi-agent workflows</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="kicker">Article 1</div>
+      <h2>Our newsroom AI policy</h2>
+      <div class="meta">Ars Technica · Updated Apr 22, 2026</div>
+      <ul>
+        <li>Ars positions AI as a tool to support journalism, not replace human writers, editors, or judgment.</li>
+        <li>Published work remains human-authored and human-reviewed.</li>
+        <li>AI can assist with tasks like editing, research support, and brainstorming, but outputs are not treated as authoritative.</li>
+        <li>Any AI-assisted material must be verified by staff before publication.</li>
+        <li>AI-generated visuals are not presented as authentic documentary evidence, and synthetic media must be clearly labeled.</li>
+        <li>Responsibility stays with the human using the tool: staff are accountable for accuracy and transparency.</li>
+      </ul>
+      <p class="source"><a href="https://arstechnica.com/ai/2026/04/our-newsroom-ai-policy/" target="_blank">Read source</a></p>
+    </section>
+
+    <section class="slide">
+      <div class="kicker">Article 2</div>
+      <h2>Ping-pong robot beats top-level human players</h2>
+      <div class="meta">Reuters · AI + robotics</div>
+      <ul>
+        <li>The story highlights a major milestone in embodied AI: a robot system outperforming high-level human table tennis players.</li>
+        <li>Ping-pong is a demanding benchmark because it combines perception, prediction, rapid control, and adaptation in real time.</li>
+        <li>The result suggests continued progress in robotics where AI is tightly coupled with physical interaction and motor precision.</li>
+        <li>Success in this domain has implications beyond sports, including factory automation, dynamic manipulation, and responsive human-robot collaboration.</li>
+        <li>The broader takeaway is that AI progress is not just about language models; fast, physical decision-making is advancing too.</li>
+      </ul>
+      <p class="source"><a href="https://www.reuters.com/world/china/ping-pong-robot-beats-top-level-human-players-2026-04-22/" target="_blank">Read source</a></p>
+    </section>
+
+    <section class="slide">
+      <div class="kicker">Article 3</div>
+      <h2>Introducing Parallel Agents in Zed</h2>
+      <div class="meta">Zed blog · Developer tools</div>
+      <ul>
+        <li>Zed now supports running multiple agents in parallel in the same workspace through a new Threads Sidebar.</li>
+        <li>Agents can be scoped to specific folders or repos, making parallel task delegation more manageable.</li>
+        <li>The product emphasizes speed and fluidity, consistent with Zed’s high-performance, 120 fps design philosophy.</li>
+        <li>Zed frames this as “agentic engineering”: humans directing multiple AI collaborators while retaining craftsmanship and oversight.</li>
+        <li>The update also changes the default layout, placing the Threads Sidebar and Agent Panel on the left.</li>
+        <li>Parallel Agents is available in the latest Zed release and aligns with open, composable developer workflows.</li>
+      </ul>
+      <p class="source"><a href="https://zed.dev/blog/parallel-agents" target="_blank">Read source</a></p>
+    </section>
+
+
+    <section class="slide">
+      <div class="kicker">Closing</div>
+      <h2>Thank you from Shane and Alex</h2>
+      <p>Thanks to everyone attending the workshop today.</p>
+    </section>
+
+    <div class="controls">
+      <button id="prev">← Prev</button>
+      <div class="counter"><span id="current">1</span> / <span id="total">5</span></div>
+      <button id="next">Next →</button>
+    </div>
+  </div>
+
+  <script>
+    const slides = Array.from(document.querySelectorAll('.slide'));
+    const current = document.getElementById('current');
+    const total = document.getElementById('total');
+    const prev = document.getElementById('prev');
+    const next = document.getElementById('next');
+    let index = 0;
+
+    total.textContent = slides.length;
+
+    function render() {
+      slides.forEach((slide, i) => slide.classList.toggle('active', i === index));
+      current.textContent = index + 1;
+    }
+
+    prev.addEventListener('click', () => {
+      index = (index - 1 + slides.length) % slides.length;
+      render();
+    });
+
+    next.addEventListener('click', () => {
+      index = (index + 1) % slides.length;
+      render();
+    });
+
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight') next.click();
+      if (e.key === 'ArrowLeft') prev.click();
+    });
+
+    render();
+  </script>
+</body>
+</html>

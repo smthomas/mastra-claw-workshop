@@ -6,5 +6,9 @@ dist
 .env
 *.db
 *.db-*
+*.duckdb
+*.duckdb-*
+*.duckdb.*
+.DS_Store
 .netlify
 .vercel
